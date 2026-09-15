@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habitly — трекер привычек</title>
+<style>
+  :root {
+    --bg: #FBF9FD;
+    --surface: #F2EDF8;
+    --surface-2: #EAE1F5;
+    --text: #211C29;
+    --text-muted: #675F73;
+    --accent: #6A3FC4;
+    --accent-ink: #FFFFFF;
+    --accent-2: #D8367D;
+    --border: #E1D7EE;
+    --code: #4A3D66;
+    --flag: #B8350033;
+    --flag-border: #D89A00;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16121F;
+      --surface: #1F1929;
+      --surface-2: #281F35;
+      --text: #EFE9F7;
+      --text-muted: #AB9FBE;
+      --accent: #B694F0;
+      --accent-ink: #1A1024;
+      --accent-2: #F2699F;
+      --border: #342A44;
+      --code: #D9CCF0;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+  h1, h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    text-wrap: balance;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .top-rule {
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .brand-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 600;
+    margin: 24px 0 4px;
+  }
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 17px;
+    margin: 0 0 40px;
+  }
+
+  .price-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 24px 0 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .price-card .amount {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .price-card .label { color: var(--text-muted); font-size: 15px; }
+
+  section { margin-bottom: 36px; }
+  section h2 {
+    font-size: 21px;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  section h2 .num {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--accent-2);
+    font-weight: 700;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+  }
+  section p, section li { color: var(--text); font-size: 16px; }
+  section p + p { margin-top: 12px; }
+  ul { padding-left: 22px; margin: 10px 0; }
+  li + li { margin-top: 6px; }
+
+  .fill-in {
+    background: var(--flag);
+    border: 1px dashed var(--flag-border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .fill-in b { color: var(--flag-border); }
+
+  a { color: var(--accent); text-decoration-color: var(--border); }
+  a:hover { text-decoration-color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+    padding-top: 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--accent); }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap">
+</head>
+<body>
+<div class="page">
+  <div class="top-rule"></div>
+  <header>
+    <div>
+      <div class="brand-name">Habitly</div>
+      <div class="eyebrow">Трекер привычек и напоминаний</div>
+    </div>
+  </header>
+
+  <h1>Habitly</h1>
+  <p class="subtitle">Мобильное приложение для отслеживания привычек и напоминаний — Android (RuStore).</p>
+
+  <section id="about">
+    <h2><span class="num">01</span>О приложении</h2>
+    <p>Habitly — приложение для Android, которое помогает формировать полезные привычки, отказываться от вредных и не забывать о повторяющихся напоминаниях. Основной функционал (учёт привычек, статистика, напоминания) доступен бесплатно без ограничений по времени.</p>
+    <p>Платная подписка <strong>Habitly Pro</strong> снимает ограничение на количество одновременно отслеживаемых привычек и открывает дополнительные виды достижений.</p>
+  </section>
+
+  <section id="price">
+    <h2><span class="num">02</span>Стоимость услуг</h2>
+    <div class="price-card">
+      <div>
+        <div class="price-card label">Habitly Pro — подписка с автопродлением</div>
+      </div>
+      <div class="amount">99&nbsp;₽ / месяц</div>
+    </div>
+    <p>Оплата производится через платёжный сервис Робокасса банковской картой. Подписка продлевается автоматически каждые 30 дней до момента отмены пользователем.</p>
+  </section>
+
+  <section id="requisites">
+    <h2><span class="num">03</span>Реквизиты продавца</h2>
+    <p>Белогорцев Павел Владимирович, самозанятый (плательщик налога на профессиональный доход, НПД).<br>
+    ИНН: 361204575686<br>
+    Регистрация в качестве плательщика НПД подтверждена через приложение «Мой налог».</p>
+  </section>
+
+  <section id="terms">
+    <h2><span class="num">04</span>Условия оказания услуг</h2>
+    <p>Оплачивая подписку Habitly Pro, пользователь получает доступ к расширенному функционалу приложения на весь оплаченный период. Услуга оказывается дистанционно — доступ открывается автоматически сразу после успешной оплаты, отдельная доставка не требуется.</p>
+    <ul>
+      <li>Подписка автоматически продлевается на новый период по той же цене, если пользователь не отменил её заранее.</li>
+      <li>Отменить подписку можно в любой момент в разделе «Настройки» приложения — доступ к Pro-функциям сохраняется до конца уже оплаченного периода, повторное списание не производится.</li>
+      <li>Так как доступ к цифровой услуге предоставляется немедленно после оплаты, возврат средств за уже начавшийся период подписки не производится, за исключением случаев, предусмотренных законодательством РФ (в частности, ст. 26.1 Закона РФ «О защите прав потребителей» — при отказе от услуги до начала её фактического использования).</li>
+      <li>По вопросам возврата и отказа от подписки следует обращаться по контактам ниже — каждое обращение рассматривается индивидуально.</li>
+    </ul>
+  </section>
+
+  <section id="contacts">
+    <h2><span class="num">05</span>Контакты</h2>
+    <p>Email: <a href="mailto:aleydafrancis969@gmail.com">aleydafrancis969@gmail.com</a></p>
+    <p>Политика конфиденциальности: <a href="privacy_policy.html">privacy_policy.html</a></p>
+  </section>
+
+  <footer>
+    © 2026 Habitly. Вопросы — на почту <a href="mailto:aleydafrancis969@gmail.com">aleydafrancis969@gmail.com</a>.
+  </footer>
+</div>
+</body>
+</html>
