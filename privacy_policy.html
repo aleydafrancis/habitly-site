@@ -1,0 +1,348 @@
+<title>Habitly Privacy Policy</title>
+<style>
+  :root {
+    --bg: #FBF9FD;
+    --surface: #F2EDF8;
+    --surface-2: #EAE1F5;
+    --text: #211C29;
+    --text-muted: #675F73;
+    --accent: #6A3FC4;
+    --accent-ink: #FFFFFF;
+    --accent-2: #D8367D;
+    --border: #E1D7EE;
+    --code: #4A3D66;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16121F;
+      --surface: #1F1929;
+      --surface-2: #281F35;
+      --text: #EFE9F7;
+      --text-muted: #AB9FBE;
+      --accent: #B694F0;
+      --accent-ink: #1A1024;
+      --accent-2: #F2699F;
+      --border: #342A44;
+      --code: #D9CCF0;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16121F;
+    --surface: #1F1929;
+    --surface-2: #281F35;
+    --text: #EFE9F7;
+    --text-muted: #AB9FBE;
+    --accent: #B694F0;
+    --accent-ink: #1A1024;
+    --accent-2: #F2699F;
+    --border: #342A44;
+    --code: #D9CCF0;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Source Sans 3', system-ui, -apple-system, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    text-wrap: balance;
+  }
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 96px;
+  }
+  .top-rule {
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    border-radius: 4px;
+    margin-bottom: 40px;
+  }
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .brand img {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: block;
+  }
+  .brand-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+  .lang-toggle {
+    display: flex;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px;
+    background: var(--surface);
+    flex-shrink: 0;
+  }
+  .lang-toggle button {
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .lang-toggle button.active {
+    background: var(--accent);
+    color: var(--accent-ink);
+  }
+  .lang-toggle button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 600;
+    margin: 6px 0 4px;
+  }
+  .updated {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 40px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin: 32px 0 40px;
+    font-size: 16px;
+  }
+  .callout strong { color: var(--accent); }
+
+  section { margin-bottom: 36px; }
+  section h2 {
+    font-size: 21px;
+    font-weight: 600;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  section h2 .num {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--accent-2);
+    font-weight: 700;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+  }
+  section p, section li { color: var(--text); font-size: 16px; }
+  section p + p { margin-top: 12px; }
+  ul { padding-left: 22px; margin: 10px 0; }
+  li + li { margin-top: 6px; }
+
+  code {
+    background: var(--surface-2);
+    color: var(--code);
+    padding: 1px 6px;
+    border-radius: 5px;
+    font-size: 0.92em;
+  }
+
+  a { color: var(--accent); text-decoration-color: var(--border); }
+  a:hover { text-decoration-color: var(--accent); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+    padding-top: 24px;
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--accent); }
+
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+  header [data-lang] { display: none; }
+  header [data-lang].active { display: contents; }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap">
+
+<div class="page">
+  <div class="top-rule"></div>
+  <header>
+    <div class="brand">
+      <img src="data:image/png;base64,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" alt="Habitly">
+      <div>
+        <div class="brand-name">Habitly</div>
+        <div class="eyebrow" data-lang="ru">Политика конфиденциальности</div>
+        <div class="eyebrow" data-lang="en">Privacy Policy</div>
+      </div>
+    </div>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-set-lang="ru" class="active">RU</button>
+      <button type="button" data-set-lang="en">EN</button>
+    </div>
+  </header>
+
+  <div data-lang="ru" class="active">
+    <h1>Политика конфиденциальности Habitly</h1>
+    <p class="updated">Действует с 15 сентября 2026 года</p>
+
+    <div class="callout">
+      <strong>Коротко:</strong> ваши привычки и напоминания хранятся на устройстве. Если включена синхронизация (включена по умолчанию, без экрана входа), их копия также хранится в нашем облачном сервисе, чтобы данные не терялись при смене телефона.
+    </div>
+
+    <section>
+      <h2><span class="num">01</span>Какие данные собирает приложение</h2>
+      <p>Habitly хранит на вашем устройстве всё, что вы вводите: названия привычек и историю их выполнения, напоминания и расписание для них, достижения, настройки темы и языка интерфейса.</p>
+      <p>Чтобы эти данные не терялись при смене телефона, приложение при первом запуске автоматически создаёт анонимную учётную запись (без экрана входа и без ввода каких-либо ваших данных) и хранит копию привычек и напоминаний в нашем облачном хранилище. По желанию вы можете привязать к этой записи email в разделе «Настройки», чтобы восстановить данные на новом устройстве.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span>Аккаунт и синхронизация</h2>
+      <p>Анонимная учётная запись не запрашивает никаких персональных данных — это просто технический идентификатор, чтобы связать ваши данные между запусками приложения. Если вы добавляете email и пароль, мы сохраняем только эти данные для входа — они не передаются третьим лицам и не используются ни для чего, кроме аутентификации.</p>
+      <p>Облачное хранилище работает на инфраструктуре нашего провайдера Supabase; сервер физически расположен за пределами России (ближайший доступный регион — Евросоюз).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span>Уведомления и виджет</h2>
+      <p>Напоминания — это локальные уведомления, которые планирует и показывает само устройство; их доставка не проходит через внешний сервер. Виджет на главном экране тоже читает только локальные данные на устройстве.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">04</span>Подписка Habitly Pro</h2>
+      <p>Если вы оформляете платную подписку, оплата и проверка её статуса обрабатываются одним из следующих способов — в зависимости от того, откуда установлено приложение:</p>
+      <ul>
+        <li>Google Play — через <strong>Google Play Billing</strong>, статус подписки проверяет сервис <strong>RevenueCat</strong>;</li>
+        <li>RuStore — через <strong>RuStore Pay</strong>, либо банковской картой через сторонний платёжный сервис <strong>Робокасса</strong>, если оплата через RuStore Pay недоступна.</li>
+      </ul>
+      <p>Эти сервисы получают только технические идентификаторы устройства и покупки, необходимые для проведения платежа и подтверждения подписки (а при оплате через Робокассу — ещё и ваш email, так как подписка привязывается к учётной записи). Ваши привычки, напоминания и другие данные из приложения им не передаются.</p>
+      <p>Подробнее об обработке данных этими сервисами — в их собственных политиках: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> и <a href="https://docs.robokassa.ru/policy/" target="_blank" rel="noopener">Робокасса</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span>Реклама и аналитика</h2>
+      <p>В приложении нет рекламы и нет систем аналитики или отслеживания поведения пользователей.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span>Удаление данных</h2>
+      <p>Вы можете удалить отдельную привычку или напоминание в любой момент прямо в приложении — при активной синхронизации удаление применяется и к облачной копии. Удаление приложения с устройства стирает локальные данные, но если синхронизация была включена, копия остаётся в облачном хранилище, привязанная к вашей учётной записи. Чтобы полностью удалить учётную запись и все связанные с ней данные из облака, напишите на почту ниже — мы удалим их вручную в разумный срок.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">07</span>Дети</h2>
+      <p>Приложение не предназначено для детей младше 13 лет. Оно не запрашивает возраст пользователя и не собирает никаких данных сверх описанных выше (данные привычек и напоминаний, и, по желанию, email для входа).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">08</span>Изменения политики</h2>
+      <p>При изменении этой политики дата в начале страницы будет обновлена. Существенные изменения также будут отражены в описании приложения в сторах.</p>
+    </section>
+
+    <footer>
+      Вопросы по этой политике, а также запросы на удаление данных — на почту <a href="mailto:aleydafrancis969@gmail.com">aleydafrancis969@gmail.com</a>.
+    </footer>
+  </div>
+
+  <div data-lang="en">
+    <h1>Habitly Privacy Policy</h1>
+    <p class="updated">Effective September 15, 2026</p>
+
+    <div class="callout">
+      <strong>In short:</strong> your habits and reminders are stored on your device. Sync is on by default (no login screen), and when it is, a copy also lives in our cloud service so your data survives a phone change.
+    </div>
+
+    <section>
+      <h2><span class="num">01</span>What data the app collects</h2>
+      <p>Habitly stores everything you enter on your device: habit names and completion history, reminders and their schedules, achievements, theme and language settings.</p>
+      <p>So this data survives a phone change, the app automatically creates an anonymous account the first time it runs (no login screen, no data entry required) and keeps a copy of your habits and reminders in our cloud storage. You can optionally link an email to this account in Settings to recover your data on a new device.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">02</span>Account and sync</h2>
+      <p>The anonymous account requests no personal data at all — it's just a technical identifier linking your data across app launches. If you add an email and password, we store only what's needed to sign you in — it is never shared with third parties or used for anything besides authentication.</p>
+      <p>Cloud storage runs on our provider Supabase's infrastructure; the server is physically located outside Russia (the nearest available region is the EU).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">03</span>Notifications and the widget</h2>
+      <p>Reminders are local notifications scheduled and shown entirely by your device — their delivery never passes through an external server. The home-screen widget also reads only local data on your device.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">04</span>Habitly Pro subscription</h2>
+      <p>If you subscribe, the purchase and its verification are handled one of the following ways, depending on where the app was installed from:</p>
+      <ul>
+        <li>Google Play — via <strong>Google Play Billing</strong>, with subscription status verified by <strong>RevenueCat</strong>;</li>
+        <li>RuStore — via <strong>RuStore Pay</strong>, or by bank card through the third-party payment service <strong>Robokassa</strong> when RuStore Pay isn't available.</li>
+      </ul>
+      <p>These services receive only the technical device and purchase identifiers needed to process payment and confirm the subscription (and, for Robokassa payments, your email, since the subscription is tied to your account). Your habits, reminders, and other in-app data are never shared with them.</p>
+      <p>See their own policies for details: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat</a>, <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a>, and <a href="https://docs.robokassa.ru/policy/" target="_blank" rel="noopener">Robokassa</a>.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">05</span>Advertising and analytics</h2>
+      <p>The app contains no advertising and no analytics or behavioral-tracking systems.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">06</span>Deleting your data</h2>
+      <p>You can delete any individual habit or reminder at any time inside the app — while sync is on, deletion also applies to the cloud copy. Uninstalling the app erases local data, but if sync was on, a copy tied to your account remains in cloud storage. To fully delete your account and all associated cloud data, email us at the address below — we'll remove it manually within a reasonable time.</p>
+    </section>
+
+    <section>
+      <h2><span class="num">07</span>Children</h2>
+      <p>The app is not directed at children under 13. It does not ask for a user's age and does not collect any data beyond what's described above (habit and reminder data, and, optionally, an email for sign-in).</p>
+    </section>
+
+    <section>
+      <h2><span class="num">08</span>Changes to this policy</h2>
+      <p>If this policy changes, the date at the top of this page will be updated. Material changes will also be noted in the app's store listings.</p>
+    </section>
+
+    <footer>
+      Questions about this policy, and data-deletion requests: <a href="mailto:aleydafrancis969@gmail.com">aleydafrancis969@gmail.com</a>.
+    </footer>
+  </div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('[data-set-lang]');
+  function setLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+    });
+    buttons.forEach(b => b.classList.toggle('active', b.getAttribute('data-set-lang') === lang));
+    try { localStorage.setItem('habitly-privacy-lang', lang); } catch (e) {}
+  }
+  buttons.forEach(b => b.addEventListener('click', () => setLang(b.getAttribute('data-set-lang'))));
+  let saved = 'ru';
+  try { saved = localStorage.getItem('habitly-privacy-lang') || 'ru'; } catch (e) {}
+  setLang(saved);
+</script>
