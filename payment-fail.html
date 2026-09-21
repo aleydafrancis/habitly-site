@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habitly — оплата не завершена</title>
+<style>
+  :root { --bg:#FBF9FD; --text:#211C29; --muted:#675F73; --accent:#6A3FC4; --ink:#fff; --accent2:#D8367D; --card:#F2EDF8; --border:#E1D7EE; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16121F; --text:#EFE9F7; --muted:#AB9FBE; --accent:#B694F0; --ink:#1A1024; --accent2:#F2699F; --card:#1F1929; --border:#342A44; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,'Segoe UI',sans-serif; line-height:1.6; }
+  .page { max-width:560px; margin:0 auto; padding:48px 24px; }
+  .rule { height:4px; border-radius:4px; background:linear-gradient(90deg,var(--accent),var(--accent2)); margin-bottom:36px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px 24px; }
+  .icon { font-size:40px; line-height:1; }
+  h1 { font-size:26px; margin:14px 0 8px; }
+  p { color:var(--muted); margin:8px 0; }
+  .btn { display:block; text-align:center; text-decoration:none; background:var(--accent); color:var(--ink); font-weight:700; font-size:18px; padding:16px 20px; border-radius:14px; margin-top:22px; }
+  .small { font-size:14px; margin-top:18px; }
+  a.link { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="rule"></div>
+  <div class="card">
+    <div class="icon">&#10007;</div>
+    <h1>Оплата не завершена</h1>
+    <p>Платёж не был выполнен, деньги не списаны. Вы можете вернуться в приложение и попробовать ещё раз.</p>
+    <a class="btn" id="open" href="habitly://payment?status=fail">Вернуться в приложение</a>
+    <p class="small">Если приложение не открылось, просто переключитесь на него вручную. Если деньги всё же списались, напишите нам, и мы всё проверим.</p>
+    <p class="small">Вопросы: <a class="link" href="mailto:aleydafrancis969@gmail.com">aleydafrancis969@gmail.com</a></p>
+  </div>
+</div>
+<script>
+  // Try to bring the user back automatically; the button is the fallback.
+  setTimeout(function () { window.location.href = 'habitly://payment?status=fail'; }, 1200);
+</script>
+</body>
+</html>
