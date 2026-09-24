@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Habitly — сброс пароля</title>
+<style>
+  :root { --bg:#FBF9FD; --text:#211C29; --muted:#675F73; --accent:#6A3FC4; --ink:#fff; --accent2:#D8367D; --card:#F2EDF8; --border:#E1D7EE; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#16121F; --text:#EFE9F7; --muted:#AB9FBE; --accent:#B694F0; --ink:#1A1024; --accent2:#F2699F; --card:#1F1929; --border:#342A44; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,'Segoe UI',sans-serif; line-height:1.6; }
+  .page { max-width:560px; margin:0 auto; padding:48px 24px; }
+  .rule { height:4px; border-radius:4px; background:linear-gradient(90deg,var(--accent),var(--accent2)); margin-bottom:36px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px 24px; }
+  h1 { font-size:26px; margin:0 0 8px; }
+  p { color:var(--muted); margin:8px 0; }
+  .btn { display:block; text-align:center; text-decoration:none; background:var(--accent); color:var(--ink); font-weight:700; font-size:18px; padding:16px 20px; border-radius:14px; margin-top:22px; }
+  .small { font-size:14px; margin-top:18px; }
+  a.link { color:var(--accent); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="rule"></div>
+  <div class="card">
+    <h1>Сброс пароля</h1>
+    <p>Нажмите кнопку ниже — приложение Habitly откроется и предложит ввести новый пароль.</p>
+    <a class="btn" id="open" href="#">Открыть Habitly</a>
+    <p class="small">Ссылка работает на том телефоне, где вы запросили сброс. Если вы открыли письмо на компьютере, откройте его на телефоне с установленным Habitly.</p>
+    <p class="small">Ссылка одноразовая и действует ограниченное время. Если вы не запрашивали сброс, просто проигнорируйте письмо.</p>
+    <p class="small">Вопросы: <a class="link" href="mailto:aleydafrancis969@gmail.com">aleydafrancis969@gmail.com</a></p>
+  </div>
+</div>
+<script>
+  // Hand the one-time code (query or hash) over to the app.
+  var target = 'habitly://reset-password' + window.location.search + window.location.hash;
+  document.getElementById('open').setAttribute('href', target);
+  setTimeout(function () { window.location.href = target; }, 800);
+</script>
+</body>
+</html>
