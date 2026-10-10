@@ -66,6 +66,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-wrap: wrap; /* very narrow phones: the RU/EN switch drops under the title */
     gap: 16px;
     margin-bottom: 12px;
   }
@@ -73,6 +74,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    min-width: 0;
   }
   .brand img {
     width: 44px;
@@ -91,6 +93,7 @@
     text-transform: uppercase;
     color: var(--text-muted);
     font-weight: 600;
+    overflow-wrap: anywhere;
   }
   .lang-toggle {
     display: flex;
@@ -124,6 +127,19 @@
     font-size: 34px;
     font-weight: 600;
     margin: 6px 0 4px;
+    /* "конфиденциальности" at 34px is wider than a phone screen: shrink the
+       heading on narrow screens and let a long word wrap instead of pushing
+       the whole page sideways. */
+    overflow-wrap: break-word;
+  }
+  @media (max-width: 480px) {
+    h1 { font-size: 26px; }
+  }
+  @media (max-width: 360px) {
+    h1 { font-size: 22px; }
+  }
+  @media (max-width: 340px) {
+    h1 { font-size: 19px; } /* the longest word then fits on one line */
   }
   .updated {
     color: var(--text-muted);
